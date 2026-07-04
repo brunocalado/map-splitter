@@ -1,0 +1,50 @@
+<div class="msp-hud">
+  <div class="msp-summary">
+    <span class="msp-count {{#if atLimit}}msp-at-limit{{/if}}">
+      {{localize "MAPSPLITTER.Hud.Parts"}}: <strong>{{parts}}</strong> / {{maxParts}}
+    </span>
+    <span class="msp-grid-info">{{rows}} &times; {{cols}}</span>
+  </div>
+
+  <div class="msp-add-buttons">
+    <button type="button" data-action="addVertical" {{#unless canAddVertical}}disabled{{/unless}}>
+      <i class="fa-solid fa-grip-lines-vertical"></i> {{localize "MAPSPLITTER.Hud.AddVertical"}}
+    </button>
+    <button type="button" data-action="addHorizontal" {{#unless canAddHorizontal}}disabled{{/unless}}>
+      <i class="fa-solid fa-grip-lines"></i> {{localize "MAPSPLITTER.Hud.AddHorizontal"}}
+    </button>
+  </div>
+  <div class="msp-add-buttons">
+    <button type="button" data-action="autoVertical" {{#unless hasVertical}}disabled{{/unless}}>
+      <i class="fa-solid fa-arrows-left-right-to-line"></i> {{localize "MAPSPLITTER.Hud.AutoVertical"}}
+    </button>
+    <button type="button" data-action="autoHorizontal" {{#unless hasHorizontal}}disabled{{/unless}}>
+      <i class="fa-solid fa-arrows-up-down-to-line"></i> {{localize "MAPSPLITTER.Hud.AutoHorizontal"}}
+    </button>
+  </div>
+
+  {{#if lines.length}}
+  <ul class="msp-lines">
+    {{#each lines}}
+    <li>
+      <span>{{this.label}}</span>
+      <button type="button" class="msp-remove" data-action="removeLine" data-line-id="{{this.id}}"
+              data-tooltip="{{localize 'MAPSPLITTER.Hud.RemoveLine'}}">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    </li>
+    {{/each}}
+  </ul>
+  {{/if}}
+
+  <p class="msp-hint">{{localize "MAPSPLITTER.Hud.Hint"}}</p>
+
+  <footer class="msp-footer">
+    <button type="button" class="msp-apply" data-action="applySplit" {{#unless canApply}}disabled{{/unless}}>
+      <i class="fa-solid fa-scissors"></i> {{localize "MAPSPLITTER.Hud.Apply"}}
+    </button>
+    <button type="button" data-action="cancelSplit">
+      {{localize "MAPSPLITTER.Hud.Cancel"}}
+    </button>
+  </footer>
+</div>

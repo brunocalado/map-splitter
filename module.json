@@ -1,0 +1,41 @@
+{
+  "id": "map-splitter",
+  "title": "Map Splitter",
+  "version": "0.0.1",
+  "description": "Slice huge maps into smaller, lighter scenes: the background image is split into WebP parts and walls, doors, lights, sounds, tiles, drawings, notes and regions are reassigned to the generated scenes, which are linked together with mirrored teleport regions.",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+
+  "authors": [
+    {
+      "name": "Mestre Digital",
+      "url": "https://www.youtube.com/@mestredigital",
+      "flags": {}
+    }
+  ],
+
+  "esmodules": [
+    "scripts/main.js"
+  ],
+
+  "styles": [
+    "styles/base.css",
+    "styles/split-hud.css",
+    "styles/progress.css"
+  ],
+
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+
+  "url": "https://github.com/brunocalado/map-splitter",
+  "manifest": "https://raw.githubusercontent.com/brunocalado/map-splitter/main/module.json",
+  "download": "https://codeload.github.com/brunocalado/map-splitter/zip/main",
+  "flags": {}
+}

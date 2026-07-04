@@ -1,0 +1,69 @@
+/*!
+ * Map Splitter
+ * Copyright (c) 2026 https://github.com/brunocalado
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3.
+ */
+
+/* Styles for the SplitHud application. Scoped under the module id class. */
+.map-splitter {
+  &.map-splitter-hud {
+    .msp-hud {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 4px 2px;
+    }
+
+    .msp-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      .msp-count.msp-at-limit {
+        color: var(--color-level-warning);
+      }
+
+      .msp-grid-info {
+        color: var(--color-text-secondary);
+      }
+    }
+
+    .msp-add-buttons {
+      display: flex;
+      gap: 6px;
+
+      button {
+        flex: 1;
+      }
+    }
+
+    .msp-lines {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-height: 180px;
+      overflow-y: auto;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        padding: 2px 4px;
+      }
+
+      .msp-remove {
+        flex: 0 0 auto;
+        width: var(--input-height);
+        height: var(--input-height);
+        line-height: 1;
+      }
+    }
+
+    .msp-footer .msp-apply {
+      flex: 2;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<div class="msp-progress">
+  <a href="https://buymeacoffee.com/mestredigital" target="_blank" class="msp-bmac" title="Buy me a coffee!"><i class="fa-solid fa-mug-hot"></i></a>
+  {{#if error}}
+    <p class="msp-error"><i class="fa-solid fa-triangle-exclamation"></i> {{error}}</p>
+  {{else if done}}
+    <p class="msp-done"><i class="fa-solid fa-circle-check"></i> {{message}}</p>
+  {{else}}
+    <p class="msp-phase">{{phase}}</p>
+    <div class="msp-progress-bar {{#if indeterminate}}msp-indeterminate{{/if}}">
+      <div class="msp-progress-fill" style="width: {{percent}}%"></div>
+    </div>
+    <p class="msp-progress-count">{{#if total}}{{current}} / {{total}}{{/if}}</p>
+    <p class="msp-hint">{{localize "MAPSPLITTER.Progress.DoNotClose"}}</p>
+  {{/if}}
+
+  {{#if showClose}}
+  <footer class="msp-footer">
+    <button type="button" data-action="closeProgress">{{localize "MAPSPLITTER.Progress.Close"}}</button>
+  </footer>
+  {{/if}}
+</div>

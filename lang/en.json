@@ -1,0 +1,66 @@
+{
+  "MAPSPLITTER": {
+    "Hud": {
+      "Title": "Map Splitter",
+      "Parts": "Parts",
+      "AddVertical": "Add Vertical",
+      "AddHorizontal": "Add Horizontal",
+      "AutoVertical": "Auto Vertical",
+      "AutoHorizontal": "Auto Horizontal",
+      "VerticalLine": "Vertical — grid line {index}",
+      "HorizontalLine": "Horizontal — grid line {index}",
+      "RemoveLine": "Remove this split line",
+      "Hint": "Drag a line on the canvas to move it; right-click a line to remove it. Lines always snap to the scene grid. You can switch scene layers freely while editing.",
+      "Apply": "Apply Split",
+      "Cancel": "Cancel",
+      "LimitReached": "Maximum of {max} parts reached. Move or remove an existing line before adding a new one."
+    },
+    "Tools": {
+      "AddCrossing": "Map Splitter: Add Border Crossing",
+      "RemoveCrossing": "Map Splitter: Remove Border Crossing"
+    },
+    "Warn": {
+      "GmOnly": "Map Splitter: only a Gamemaster can split scenes.",
+      "NoScene": "Map Splitter: no active scene. Open the scene you want to split first.",
+      "SquareOnly": "Map Splitter: only square grids are supported in this version.",
+      "SingleLevel": "Map Splitter: only scenes with exactly one level are supported.",
+      "NoBackground": "Map Splitter: the active scene has no background image to slice.",
+      "AxisTooSmall": "Map Splitter: the scene is too small to be cut along this axis.",
+      "NoFreePosition": "Map Splitter: there is no free grid line left for a new split line on this axis.",
+      "NeedLine": "Map Splitter: add at least one split line before applying.",
+      "CustomTextures": "Map Splitter: the background uses custom texture offset/scale settings which are not supported. Slicing will assume the default full-fit placement.",
+      "ClickBorder": "Map Splitter: click a border grid square adjacent to a linked scene.",
+      "CrossingExists": "Map Splitter: this border square is already open.",
+      "CrossingMissing": "Map Splitter: there is no crossing to remove on this border square.",
+      "NeighborMissing": "Map Splitter: the adjacent generated scene no longer exists."
+    },
+    "Info": {
+      "CrossingAdded": "Map Splitter: border crossing opened on both scenes.",
+      "CrossingRemoved": "Map Splitter: border crossing removed on both scenes."
+    },
+    "Confirm": {
+      "Title": "Apply Split",
+      "Content": "Split the scene \"{name}\" into {count} new scenes? The original scene is preserved. {count} WebP images will be generated in the server folder \"map-splitter\"."
+    },
+    "Progress": {
+      "Title": "Map Splitter — Processing",
+      "Preparing": "Preparing: loading the background image…",
+      "Images": "Slicing and uploading images…",
+      "Building": "Recalculating walls, lights, sounds, tiles, drawings, notes and regions…",
+      "Creating": "Creating scenes…",
+      "Thumbnails": "Generating scene thumbnails…",
+      "DoNotClose": "Please wait — do not change scenes or close Foundry while processing.",
+      "Done": "Split complete: {count} scenes created.",
+      "Close": "Close"
+    },
+    "Error": {
+      "NoCuts": "No valid split lines were provided.",
+      "TooManyParts": "The split would exceed the maximum of {max} parts.",
+      "Failed": "Map Splitter failed: {message}"
+    },
+    "Region": {
+      "TeleportTo": "Teleport to {name}",
+      "ArrivalFrom": "Arrival from {name}"
+    }
+  }
+}

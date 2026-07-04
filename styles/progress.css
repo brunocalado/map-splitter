@@ -1,0 +1,79 @@
+/*!
+ * Map Splitter
+ * Copyright (c) 2026 https://github.com/brunocalado
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3.
+ */
+
+/* Styles for the ProgressApp application. Scoped under the module id class. */
+.map-splitter {
+  &.map-splitter-progress {
+    .msp-progress {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 6px 2px;
+      text-align: center;
+      position: relative;
+    }
+
+    .msp-bmac {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      color: var(--color-text-secondary);
+      font-size: 0.9em;
+      transition: color 0.2s, text-shadow 0.2s;
+      
+      &:hover {
+        color: #ffdd00;
+        text-shadow: 0 0 5px rgba(255, 221, 0, 0.5);
+      }
+    }
+
+    .msp-phase {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .msp-progress-bar {
+      height: 14px;
+      border-radius: 7px;
+      background: var(--map-splitter-bar-bg);
+      overflow: hidden;
+
+      .msp-progress-fill {
+        height: 100%;
+        background: var(--map-splitter-accent);
+        transition: width 0.15s ease;
+      }
+
+      &.msp-indeterminate .msp-progress-fill {
+        width: 30%;
+        animation: map-splitter-slide 1.2s ease-in-out infinite alternate;
+      }
+    }
+
+    .msp-progress-count {
+      margin: 0;
+      color: var(--color-text-secondary);
+    }
+
+    .msp-error {
+      margin: 0;
+      color: var(--color-level-error);
+    }
+
+    .msp-done {
+      margin: 0;
+      color: var(--color-level-success);
+    }
+  }
+}
+
+/* Keyframes cannot be nested inside a scope; the name is prefixed with the module id instead. */
+@keyframes map-splitter-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(233%); }
+}
