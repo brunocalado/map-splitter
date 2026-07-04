@@ -7,7 +7,7 @@ Slice huge maps into smaller, lighter scenes for Foundry VTT!
 ### 📊 Performance Example
 
 In the preview images below, you can see a massive performance gain:
-- **Original Scene:** 9300x1350 resolution | 1632 Walls | 53 Lights | 12.9MB
+- **Original Scene:** 9300x13050 resolution | 1632 Walls | 53 Lights | 12.9MB
 - **Split Part:** 3750x4950 resolution | 315 Walls | 7 Lights | 116 Regions | 2.66MB
 
 <img src="docs/preview-before-cut.webp">
