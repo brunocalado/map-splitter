@@ -33,6 +33,7 @@ In the preview images below, you can see a massive performance gain:
 - **Seamless Transitions:** Players won't see an abrupt cut when moving between maps. The borders look natural!
 - **Everything is Preserved:** Walls, doors, lights, sounds, and notes are automatically duplicated and adjusted for your new smaller scenes.
 - **Easy Border Control:** You can easily add or remove border crossings with a simple click using the special Region Controls.
+<br><img src="docs/region-controls.webp" width="300">
 - **Organized Folders:** All new scenes are neatly placed into a specific Scene folder, keeping your world organized.
 
 ## 🚀 Usage
