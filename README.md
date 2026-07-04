@@ -4,6 +4,12 @@ Slice huge maps into smaller, lighter scenes for Foundry VTT!
 
 **🌟 The most important feature:** Gigantic scenes eat player RAM and bandwidth — Map Splitter cuts them into smaller parts to improve performance, and **automatically creates teleport zones** so your players can seamlessly move between the adjacent maps!
 
+### 📊 Performance Example
+
+In the preview images below, you can see a massive performance gain:
+- **Original Scene:** 9300x1350 resolution | 1632 Walls | 53 Lights | 12.9MB
+- **Split Part:** 3750x4950 resolution | 315 Walls | 7 Lights | 116 Regions | 2.66MB
+
 <img src="docs/preview-before-cut.webp">
 
 <img src="docs/preview-after-cut.webp">
