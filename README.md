@@ -1,6 +1,8 @@
-# Map Splitter
+# 🗺️ Map Splitter
 
-Slice huge maps into smaller, lighter scenes for Foundry VTT v14. Gigantic scenes eat player RAM and bandwidth — Map Splitter cuts them into up to 15 grid-aligned parts, splits the background image, reassigns the scene data, and links everything back together with teleport regions.
+Slice huge maps into smaller, lighter scenes for Foundry VTT! 
+
+**🌟 The most important feature:** Gigantic scenes eat player RAM and bandwidth — Map Splitter cuts them into smaller parts to improve performance, and **automatically creates teleport zones** so your players can seamlessly move between the adjacent maps!
 
 <img src="docs/preview-before-cut.webp">
 
@@ -8,32 +10,28 @@ Slice huge maps into smaller, lighter scenes for Foundry VTT v14. Gigantic scene
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-Donate-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/mestredigital) [![More Modules](https://img.shields.io/badge/Foundry%20VTT-More%20Modules-red?style=for-the-badge&logo=gamepad)](https://mestredigital.online/pages/projetos-en)
 
-# How it Works
+# 🛠️ How it Works
 
-1. Open the scene you want to split and run `MapSplitter.Open();` (or use the button in the Scenes sidebar).
+1. Open the scene you want to split and run `MapSplitter.Open();` (or simply use the button in the Scenes sidebar).
 
 <p align="center"><img src="docs/scenes-button.webp"></p>
-2. Add vertical and horizontal split lines from the floating HUD. Lines snap to the grid; drag them on the canvas to move, right-click to remove. You can switch scene layers (walls, lights, sounds, …) freely while choosing the best cutting points.
-3. Click **Apply Split**. The module slices the background into WebP images (stored in the server folder `map-splitter`), rebuilds the scene data for each part, and creates the new scenes in one batch. The original scene is never modified.
 
-## Features
+2. Add vertical and horizontal split lines from the floating menu. You can easily drag them around to choose the perfect cutting points. Right-click to remove a line.
+3. Click **Apply Split**. The module will automatically slice the image, organize everything, and create the new lighter scenes for you. **Your original scene is never modified!**
 
-- Up to **15 parts** per split, with a live part-count preview that blocks additional lines at the limit.
-- Background image sliced at native resolution and saved as **WebP** with deterministic, collision-safe filenames (`my-map-1-2.webp`, `my-map-1-2_1.webp`, …).
-- Every edge that faces an adjacent part gets a **4-grid-square overlap buffer**: the generated scene also contains a copy of the bordering image and walls of its neighbors, so players never see an abrupt cut when a token approaches or crosses a border.
-- Walls are geometrically split at the cut line; **doors are duplicated whole** so they stay interactable.
-- Lights and sounds are duplicated into every scene their radius reaches, even across borders.
-- Tiles, drawings, notes and regions are reassigned/duplicated with recalculated coordinates.
-- Adjacent scenes are linked with **one-square teleport regions at the scene edges** (`relative` placement): every grid cell of a shared border gets a departure square on the outer rim of the overlap buffer and a passive arrival square at the identical map position in the neighbor scene, per direction. Tokens traverse the buffer and switch scenes without visually moving, and each crossing cell can be managed individually.
-- **Border crossing tools**: on generated scenes, the Region Controls gain two extra tools — *Add Border Crossing* and *Remove Border Crossing*. Click a border grid square to create or delete the teleport pair there; the mirrored square of the linked neighbor scene is updated automatically, so you can quickly seal off walled rooms or dead ends the automatic generation cannot know about.
-- Generated scenes are filed into a **Scene folder** named after the source scene (reused on later re-splits of the same scene).
-- Blocking progress window with per-phase progress bars.
+## ✨ Features
 
-**Scope of the initial version:** square grids only, scenes with exactly one level, tokens are ignored, and fog exploration is not preserved (exploration restarts in each generated scene).
+- **Split up to 15 parts:** Easily cut your map into multiple pieces to guarantee smooth gameplay.
+- **Smart Image Slicing:** The background image is sliced at high quality and saved as WebP format to save space.
+- **Automatic Teleport Zones:** Adjacent scenes are linked with teleport regions! When a player walks to the edge of one map, they are smoothly teleported to the adjacent map. 
+- **Seamless Transitions:** Players won't see an abrupt cut when moving between maps. The borders look natural!
+- **Everything is Preserved:** Walls, doors, lights, sounds, and notes are automatically duplicated and adjusted for your new smaller scenes.
+- **Easy Border Control:** You can easily add or remove border crossings with a simple click using the special Region Controls.
+- **Organized Folders:** All new scenes are neatly placed into a specific Scene folder, keeping your world organized.
 
-## Usage
+## 🚀 Usage
 
-Open the importer from the Scenes directory sidebar button, or from a macro / the console:
+Open the map splitter tool from the Scenes directory sidebar button, or simply use this macro:
 
 ```js
 MapSplitter.Open();
